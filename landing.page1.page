@@ -1,0 +1,331 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coach Boison — From Broke to Daily Commissions</title>
+  <meta name="description" content="Join Coach Boison on Telegram to learn how he went from broke to earning daily commissions 
+  using affiliate marketing." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#00B686; /* chosen green */
+      --brand-2:#00DFAA;
+      --accent-dark:#0b534b;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#ffffff;
+      --maxw:980px;
+      --glass: rgba(255,255,255,0.7);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%} 
+body{margin:0;background:linear-gradient(180deg,#f7fdfb 0%,#ffffff 100%);color:#07122a;line-height:1.45;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+.container{max-width:var(--maxw);margin:0 auto;padding:22px}
+
+/* Sticky top timer bar */
+.topbar{position:fixed;left:0;right:0;top:12px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+gap:12px;max-width:1100px;padding:10px 14px;background:
+rgba(255,255,255,0.98);border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.06);z-index:999}
+.topbar .left{display:flex;gap:12px;align-items:center}
+.timer-label{font-weight:700;color:#111;text-transform:uppercase;font-size:13px}
+.timer{font-weight:800;font-size:15px;color:#b91c1c;padding:6px 10px;border-radius:8px;background:linear-gradient(90deg,rgba(255,255,255,0.0),rgba(255,255,255,0.02));box-shadow:inset 0 -2px 0 rgba(0,0,0,0.03)}
+.topbar .ctas{display:flex;gap:10px;align-items:center}
+.cta-small{padding:8px 12px;border-radius:10px;font-weight:700;border:1px solid rgba(7,18,42,0.06);background:transparent}
+.cta-main{padding:10px 16px;border-radius:12px;font-weight:800;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:white;box-shadow:0 8px 18px rgba(0,182,134,0.12);}
+
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:56px;height:56px;border-radius:12px;overflow:hidden;flex-shrink:0;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.logo img{width:100%;height:100%;object-fit:cover}
+.brand h1{font-size:18px;margin:0}
+.nav{display:flex;gap:10px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+.eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg,rgba(0,182,134,0.08),rgba(0,223,170,0.06));color:var(--accent-dark);font-weight:700}
+.headline{font-size:30px;line-height:1.03;margin:14px 0 12px;font-weight:800}
+.lead{color:var(--muted);margin-bottom:18px;font-size:15px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Card */
+.hero-card{background:var(--card);border-radius:18px;padding:16px;box-shadow:0 12px 40px rgba(2,6,23,0.06)}
+.profile-photo{width:100%;height:360px;border-radius:12px;overflow:hidden}
+.profile-photo img{width:100%;height:100%;object-fit:cover}
+.badges{display:flex;gap:8px;margin-top:12px}
+.badge{background:rgba(0,182,134,0.06);padding:8px 10px;border-radius:999px;font-weight:700;color:var(--brand)}
+
+/* Sections */
+section{padding:32px 0;border-top:1px solid rgba(7,18,42,0.03)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 26px rgba(2,6,23,0.04)}
+.benefit{display:flex;gap:12px;align-items:flex-start}
+.benefit .dot{width:46px;height:46px;border-radius:10px;background:linear-gradient(180deg,var(--brand),var(--brand-2));color:white;display:flex;align-items:center;justify-content:center;font-weight:800}
+
+/* Testimonials */
+.testimonials{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:6px}
+.t-card{padding:14px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbfffb);border:1px solid rgba(0,182,134,0.05);box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.t-card p{margin:0;color:var(--muted);font-size:15px}
+.t-meta{display:flex;gap:12px;align-items:center;margin-top:12px}
+.t-meta img{width:54px;height:54px;border-radius:10px;object-fit:cover}
+
+/* Footer CTA */
+.footer-cta{padding:22px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#f7fffb);box-shadow:0 12px 30px rgba(2,6,23,0.06)}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800}
+.btn-tele{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:white;box-shadow:0 12px 30px rgba(0,182,134,0.12)}
+.btn-wh{border:1px solid rgba(7,18,42,0.06);background:transparent;color:var(--brand);font-weight:800}
+
+/* Animations */
+.fade-in{opacity:0;transform:translateY(18px);transition:all 700ms cubic-bezier(.2,.9,.25,1)}
+.fade-in.in-view{opacity:1;transform:none}
+@keyframes pulse{
+  0%{box-shadow:0 6px 20px rgba(0,182,134,0.12)}
+  50%{box-shadow:0 12px 30px rgba(0,182,134,0.18)}
+  100%{box-shadow:0 6px 20px rgba(0,182,134,0.12)}
+}
+.pulse{animation:pulse 2.2s infinite}
+
+/* small helpers */
+.muted{color:var(--muted)}
+.center{text-align:center}
+.pill{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(0,182,134,0.06);font-weight:700;color:var(--brand)}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .hero-card{order:-1}
+  .grid{grid-template-columns:1fr}
+  .testimonials{grid-template-columns:1fr}
+  .profile-photo{height:260px}
+  .topbar{left:10px;right:10px}
+  .headline{font-size:22px}
+}
+
+/* Accessibility focus */
+.btn:focus{outline:3px solid rgba(0,182,134,0.12);outline-offset:3px}
+
+  </style>
+</head>
+<body>  <!-- Sticky top offer bar -->  <div class="topbar" role="region" aria-label="Limited time offer">
+    <div class="left">
+      <div class="timer-label">⏳ Offer Ends In:</div>
+      <div id="countdown" class="timer" aria-live="polite">15:00:00</div>
+    </div>
+    <div class="ctas">
+      <a id="topJoin" class="cta-main" href="https://t.me/coach_boison1" target="_blank" rel="noopener">Join Now</a>
+      <a class="cta-small" href="https://wa.me/233538387529" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>  <div class="container" style="padding-top:80px">
+    <header>
+      <div class="brand">
+        <div class="logo.jpg.jpg"><img alt=""></div>
+        <div>
+          <h1>Coach Boison</h1>
+          <div class="muted">Affiliate marketing mentor — Learn to earn daily</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="btn-tele" href="#story">My Story</a>
+        <a class="btn-wh" href="#benefits">What You Get</a>
+        <a class="btn-tele" href="https://t.me/coach_boison1" target="_blank" rel="noopener">Join Telegram</a>
+      </nav>
+    </header><main>
+  <section class="hero fade-in">
+    <div>
+      <div class="eyebrow">Free Mentorship — Start Today</div>
+      <h2 class="headline">Discover How I Went From Broke To Earning Daily Commissions Online</h2>
+      <p class="lead">Not long ago I was trying everything online with no results. Then I used a simple system and made <strong>$500</strong> in my first month — right from my phone. Now I make daily commissions and I’m teaching others to do the same.</p>
+
+      <div class="ctas">
+        <a id="heroTele" class="btn btn-tele pulse" href="https://t.me/coach_boison1" target="_blank" rel="noopener">Join Telegram — Take Action Now</a>
+        <a class="btn btn-wh" href="https://wa.me/233538387529" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+
+      <div style="margin-top:18px" class="muted">No experience needed • Works on any smartphone • Real step-by-step help</div>
+
+      <div id="benefits" style="margin-top:28px">
+        <div class="grid">
+          <div class="card fade-in">
+            <h3 style="margin-top:0">What You’ll Get</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
+              <div class="benefit"><div class="dot">1</div><div><strong>Free Affiliate Marketing Training</strong><div class="muted">Learn how to start and scale from scratch.</div></div></div>
+              <div class="benefit"><div class="dot">2</div><div><strong>Step-by-Step Guide To Your First Sale</strong><div class="muted">A daily roadmap that produces real results.</div></div></div>
+              <div class="benefit"><div class="dot">3</div><div><strong>Daily Mentorship & Support</strong><div class="muted">Ask questions and get feedback until you win.</div></div></div>
+              <div class="benefit"><div class="dot">4</div><div><strong>Tools, Scripts & Templates</strong><div class="muted">Copy the exact assets that attract buyers.</div></div></div>
+            </div>
+          </div>
+
+          <div class="card fade-in">
+            <h3 style="margin-top:0">Quick Proof</h3>
+            <p class="muted">In the first month of using this system I earned <strong>$500</strong> — and today I earn daily commissions while mentoring others.</p>
+            <div class="gallery" style="margin-top:14px">
+              <div class="thumb"><img src="before.jpg.jpg" alt="Before - Coach Boison"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="hero-card fade-in">
+      <div class="profile-photo"><img src="after.jpg.jpg" alt="Coach Boison after"></div>
+      <div class="badges"><div class="badge">Made $500 in 30 days</div><div class="badge">Daily Commissions</div></div>
+      <div style="margin-top:12px">
+        <h4 style="margin:0">Ready to start?</h4>
+        <p class="muted" style="margin:6px 0 0">Join my Telegram for free training and daily mentorship.</p>
+        <div style="margin-top:12px;display:flex;gap:10px">
+          <a class="btn-tele" href="https://t.me/coach_boison1" target="_blank" rel="noopener">Join Telegram</a>
+          <a class="btn-wh" href="https://wa.me/233538387529" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section id="story" class="fade-in">
+    <div class="card">
+      <h3>My Journey (Short Version)</h3>
+      <p class="muted">I was trying everything online with no results. After discovering a simple affiliate marketing system, I made $500 in my first month using only my smartphone. That success taught me the exact steps to repeat — and I now teach others how to do the same through daily mentorship and step-by-step guides.</p>
+      <div style="margin-top:18px" class="ctas">
+        <a class="btn-tele" href="https://t.me/coach_boison1" target="_blank" rel="noopener">Join Telegram — Start Now</a>
+        <a class="btn-wh" href="https://wa.me/233538387529" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h3 class="center">🔥 Real People, Real Results 🔥</h3>
+    <p class="center muted">Proof that this system works — from students, beginners, and everyday people just like you.</p>
+
+    <div class="gallery" style="margin-top:20px;margin-bottom:14px;justify-content:center">
+      <div class="thumb" style="max-width:360px;border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(2,6,23,0.06)"><img src="after.jpg" alt="Coach Boison after"></div>
+    </div>
+
+    <div class="testimonials">
+      <div class="t-card fade-in">
+        <p>“Another sale made 😭😂 Thanks to my coaches ❤ @Coach Boison”</p>
+        <div class="t-meta"><img src="testi1.jpg.jpg" alt="testimonial 1"><div><strong>Naomi.</strong><div class="muted">Student</div></div></div>
+      </div>
+
+      <div class="t-card fade-in">
+        <p>“After taking a break, I came back and started earning again! Thank you so much for your tips and encouragement 🙏.”</p>
+        <div class="t-meta"><img src="testi2.jpg.jpg" alt="testimonial 2"><div><strong>Aisha K.</strong><div class="muted">Beginner</div></div></div>
+      </div>
+      <div class="t-card fade-in">
+        <p>“I never believed I could earn online until I joined this group. Now I make commissions every single day!”</p>
+        <div class="t-meta"><img src="testi3.jpg.jpg" alt="testimonial 3"><div><strong>Michael .</strong><div class="muted">Affiliate</div></div></div>
+      </div>
+
+      <div class="t-card fade-in">
+        <p>“This mentorship changed my life! I’m now helping others get started too — thank you Coach Boison 🙌.”</p>
+        <div class="t-meta"><img src="before.jpg.jpg" alt="Testimonial from Lady Oma, My classmate wayback in high school"><div><strong>Oma.</strong><div class="muted">Young Entrepreneur</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <div class="footer-cta center">
+      <h3 style="margin:0">Ready to change your life?</h3>
+      <p class="muted">Don’t wait — results come to those who take action. Join our Telegram and follow the simple system I used to make my first $500.</p>
+      <div style="margin-top:12px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a id="joinBig" class="btn btn-tele pulse" href="https://t.me/coach_boison1" target="_blank" rel="noopener" style="min-width:180px">Join Telegram Now</a>
+        <a class="btn btn-wh" href="https://wa.me/233538387529" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer style="padding:26px 0;text-align:center;color:var(--muted);font-size:14px">© Coach Boison • Built for action. Privacy respected — no spam. Telegram: @coach_boison1</footer>
+
+  </div>  <script>
+    /* ---- Fade-in on scroll ---- */
+    (function(){
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){entry.target.classList.add('in-view')}
+        })
+      },{threshold:0.12});
+      document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+    })();
+
+    /* ---- Countdown Timer (15 hours) with auto-restart and persistence ---- */
+    (function(){
+      const display = document.getElementById('countdown');
+      const STORAGE_KEY = 'coachboison_endtime_v1';
+      const DURATION_MS = 15 * 60 * 60 * 1000; // 15 hours
+
+      function getEndTime(){
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if(saved){
+          const n = Number(saved);
+          if(!isNaN(n)) return n;
+        }
+        const e = Date.now() + DURATION_MS;
+        localStorage.setItem(STORAGE_KEY, String(e));
+        return e;
+      }
+
+      let endTime = getEndTime();
+
+      function formatTime(ms){
+        const total = Math.max(0, Math.floor(ms/1000));
+        const s = total % 60; const m = Math.floor((total/60)%60); const h = Math.floor(total/3600);
+        return [h,m,s].map(v=>String(v).padStart(2,'0')).join(':');
+      }
+
+      function tick(){
+        const now = Date.now();
+        const diff = endTime - now;
+        if(diff <= 0){
+          // play beep
+          playBeep();
+          // restart timer
+          endTime = Date.now() + DURATION_MS;
+          localStorage.setItem(STORAGE_KEY, String(endTime));
+        }
+        display.textContent = formatTime(endTime - now);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+
+      // ensure if user opens in another tab the timer still reflects stored endTime
+      window.addEventListener('storage', (e)=>{ if(e.key===STORAGE_KEY){ endTime = Number(e.newValue) || Date.now() + DURATION_MS }});
+    })();
+
+    /* ---- Soft beep using WebAudio ---- */
+    function playBeep(){
+      try{
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = 'sine';
+        o.frequency.value = 880; // frequency
+        g.gain.value = 0.02; // very soft
+        o.connect(g); g.connect(ctx.destination);
+        o.start();
+        setTimeout(()=>{ o.stop(); ctx.close(); }, 350);
+      }catch(e){ console.warn('Beep failed', e) }
+    }
+
+    /* ---- Smooth scroll for join top button to main CTA for users who click Join Now in topbar (keeps them on page) ---- */
+    document.getElementById('topJoin').addEventListener('click', function(e){
+      // allow direct open in new tab if ctrl/cmd
+      try{ if(e.metaKey||e.ctrlKey) return; }catch(e){ }
+      e.preventDefault();
+      document.getElementById('joinBig').scrollIntoView({behavior:'smooth',block:'center'});
+    });
+
+    /* Accessibility: reduce motion if user prefers reduced motion */
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.querySelectorAll('.pulse').forEach(el=>el.style.animation='none');
+    }
+  </script></body>
+</html>
