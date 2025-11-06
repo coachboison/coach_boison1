@@ -13,7 +13,19 @@
   a { text-decoration:none; }
   h1,h2,h3,h4 { color:#001f5b; }
   .section { padding:3rem 1rem; max-width:1200px; margin:auto; }
-
+/* This targets all images inside a specific section */
+.journey-section img {
+    /* Ensures the image acts like a full paragraph or div, 
+       forcing the next element (the text) onto a new line */
+    display: block; 
+    
+    /* Optional: Controls the space between the two images if they are still appearing on the same line */
+    margin-bottom: 10px; 
+    
+    /* Optional: Makes each image span the full width of the container for better stacking */
+    width: 100%; 
+    height: auto;
+}
   /* Hero Section */
   .hero {
     background: linear-gradient(120deg, #001f5b, #0056ff, #001f5b);
@@ -262,4 +274,5 @@ window.onload = function () {
 </body>
 
 </html>
+
 
